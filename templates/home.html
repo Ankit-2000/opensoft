@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background: #F3F1E9; /* fallback for old browsers */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+</style>
+<body>
+{% extends "layout.html" %}
+{% block content %}
+<h1><p align="center"><u>Notifications</u></p></h1>
+{%if cab %}
+<h3 align="center"><u>{{cab}}</u></h3>
+{%endif%}
+{% for i in resultcab %}
+<p align='center'>Interested person name : {{i['cab_name']}}</p>
+<p align="center">Interested person contact : {{i['cab_contact']}}</p>
+<br>
+<h4 align="center"><u>Your cab details</u></h4>
+<p align='center'>Date : {{i['date']}}</p>
+<p align='center'>Time : {{i['time']}}</p>
+<p align='center'>Source : {{i['source']}}</p>
+<p align='center'>Destination : {{i['destination']}}</p>
+<p align='center'>Currently available seats : {{i['NAS']}}</p>
+<p align='center'>Fare : {{i['fare']}}</p>
+{% endfor %}
+{%if buy %}
+<h3 align="center"><u>{{buy}}</u></h3>
+{%endif%}
+{% for i in resultbuy %}
+<p align='center'>Interested person name : {{i['buy_name']}}</p>
+<p align="center">Interested person contact : {{i['buy_contact']}}</p>
+<br>
+<h4 align="center"><u>Your product details</u></h4>
+<p align='center'>Name : {{i['productname']}}</p>
+<p align='center'>Price : INR {{i['price']}}</p>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>

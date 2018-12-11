@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details</title>
+</head>
+<body>
+	{% if owner %}
+	<h1 align="center"><u>KGP Centrale</u></h1>
+	<h3 align="center"><u>Contact details of owner</u></h3>
+	<h4 align="center">Name - {{owner['name']}}</h4>
+	<h4 align="center">Contact number - {{owner['contact']}}</h4>
+	{% endif %}
+	{%if details %}
+	<h3 align="center"><u>Product details</u></h3>
+	<h4 align="center">Product Name - {{details['productname']}}</h4>
+	<h4 align="center">Price - Rs. {{details['fare']}}</h4>
+	{%endif%}
+	<h6 align="center"><u>Note</u> : Contact owner for further talks over product.</h6>
+</body>
+</html>

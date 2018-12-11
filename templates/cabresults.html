@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>results</title>
+</head>
+<body>
+	<div class="wrapper">
+		<table>
+			<tr>
+				<td>date</td>
+				<td>time</td>
+				<td>source</td>
+				<td>destination</td>
+				<td>number of seats</td>
+				<td>fare</td>
+			</tr>
+			<tr>
+				{%for i in data%}
+					<td>{{i['date']}}</td>
+					<td>{{i['time']}}</td>
+					<td>{{i['source']}}</td>
+					<td>{{i['destination']}}</td>
+					<td>{{i['number of seats']}}</td>
+					<td>{{i['fare']}}</td>
+				{%endfor%}
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

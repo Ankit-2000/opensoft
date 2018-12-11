@@ -1,0 +1,199 @@
+
+<html>
+<title>Search a cab-KGP Centrale!</title>
+<head>
+<script type="text/javascript">
+	$('.message a').click(function(){
+	 $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+<style type="text/css">@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+	width: 360px;
+	padding: 8% 0 0;
+	margin: auto;
+}
+.form {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 500px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 1000px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input, .form select {
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.form button {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CAF50;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+	background: #43A047;
+}
+.form .message {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}
+.form .message a {
+	color: #4CAF50;
+	text-decoration: none;
+}
+.form .register-form {
+	display: none;
+}
+.container {
+	position: relative;
+	z-index: 1;
+	max-width: 300px;
+	margin: 0 auto;
+}
+.container:before, .container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.container .info {
+	margin: 50px auto;
+	text-align: center;
+}
+.container .info h1 {
+	margin: 0 0 15px;
+	padding: 0;
+	font-size: 36px;
+	font-weight: 300;
+	color: #1a1a1a;
+}
+.container .info span {
+	color: #4d4d4d;
+	font-size: 12px;
+}
+.container .info span a {
+	color: #000000;
+	text-decoration: none;
+}
+.container .info span .fa {
+	color: #EF3B3A;
+}
+body {
+	background: #F3F1E9; /* fallback for old browsers */
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;      
+}
+</style>
+</head>
+<body>
+{% extends "layout.html" %}
+{% block content %}
+<div class="form">
+	<h1 align="center">Cab Sharing</h1>
+	<h2 align="center">Search for a cab</h2>
+	<h4 align="center">Fill out the details</h4>		
+		<form class="cab sharing" method="POST" action="">
+			<input type="date" placeholder="Date of travel"  name="date" required/>
+			<select name="time" value="time" required>
+				<option value="9999">--Select your time---</option>
+			  	<option value="0000">0000 hrs</option>
+			    <option value="0030">0030 hrs</option>
+			    <option value="0100">0100 hrs</option>
+			    <option value="0130">0130 hrs</option>
+			    <option value="0200">0200 hrs</option>
+			    <option value="0230">0230 hrs</option>
+			  	<option value="0300">0300 hrs</option>
+			    <option value="0330">0330 hrs</option>
+			    <option value="0400">0400 hrs</option>
+			    <option value="0430">0430 hrs</option>
+			    <option value="0500">0500 hrs</option>
+			    <option value="0530">0530 hrs</option>
+			    <option value="0600">0600 hrs</option>
+			    <option value="0630">0630 hrs</option>
+			    <option value="0700">0700 hrs</option>
+			    <option value="0730">0730 hrs</option>
+			    <option value="0800">0800 hrs</option>
+			    <option value="0830">0830 hrs</option>
+			  	<option value="0900">0900 hrs</option>
+			    <option value="0930">0930 hrs</option>
+			    <option value="1000">1000 hrs</option>
+			    <option value="1030">1030 hrs</option>
+			    <option value="1100">1100 hrs</option>
+			    <option value="1130">1130 hrs</option>
+			    <option value="1200">1200 hrs</option>
+			    <option value="1230">1230 hrs</option>
+			    <option value="1300">1300 hrs</option>
+			    <option value="1330">1330 hrs</option>
+			    <option value="1400">1400 hrs</option>
+			    <option value="1430">1430 hrs</option>
+			    <option value="1500">1500 hrs</option>
+			    <option value="1530">1530 hrs</option>
+			    <option value="1600">1600 hrs</option>
+			    <option value="1630">1630 hrs</option>
+			    <option value="1700">1700 hrs</option>
+			    <option value="1730">1730 hrs</option>
+			    <option value="1800">1800 hrs</option>
+			    <option value="1830">1830 hrs</option>
+			    <option value="1900">1900 hrs</option>
+			    <option value="1930">1930 hrs</option>
+			    <option value="2000">2000 hrs</option>
+			    <option value="2030">2030 hrs</option>
+			    <option value="2100">2100 hrs</option>
+			    <option value="2130">2130 hrs</option>
+			    <option value="2200">2200 hrs</option>
+			    <option value="2230">2230 hrs</option>
+			    <option value="2300">2300 hrs</option>
+			    <option value="2330">2330 hrs</option>
+			    </select>
+			  <select name="Source" value="cities" required>
+			  	<option value="0">--Select your source---</option>
+			    <option value="IIT">IIT</option>
+			    <option value="Hijli">Hijli</option>
+			    <option value="KGP Railway Station">Kgp railway station</option>
+			    <option value="CCU Airport">CCU Airport</option>
+			    <option value="Dominos">Dominos</option>
+			   </select> 
+			   <select name="Destination" value="cities" required>
+			  	<option value="0">--Select your source---</option>
+			    <option value="IIT">IIT</option>
+			    <option value="Hijli">Hijli</option>
+			    <option value="KGP Railway Station">Kgp railway station</option>
+			    <option value="CCU Airport">CCU Airport</option>
+			    <option value="Dominos">Dominos</option>
+			   </select>  	
+			<button>Submit</button>
+			<p class="message">Didn't found a cab? Don't worry!<a href="cabregister">Register for cab</a></p>
+			{% if error %}
+			<p>{{ error }}</p>
+      		{% endif %}
+			<b>Note</b> - Travellers within 1 hr from your journey will be displayed
+		</form>
+	</div>
+{% endblock %}	
+</body>
+</html>
+
+
+
+
+

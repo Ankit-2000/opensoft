@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Buy-KGP Centrale!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="static/styles/style.css" />
+</head>
+
+<body>
+{% extends "layout.html" %}
+{% block content %}	
+	<div id="wrapper">
+		<div id="content_inside">
+			<div id="sidebar">
+				<ul id="list">
+					<li><h4><u>Category</u></h4></li>
+					<li class="color"><a href="/furniture">Furniture</a></li>
+					<li><a href="/crockery">Crockery</a></li>
+					<li><a href="/electronics">Electronics</a></li>
+					<li class="color"><a href="/books">Books</a></li>
+					<br>
+					<!--<li><h4><u>Sort by :</u></h4></li>
+					<li class='color'><input type='radio' name="sort" value=0 checked>Low to High</input></li>
+					<li><input type='radio' name="sort" value=1>High to Low</input></li>-->
+				</ul>
+			</div>
+			<form method='POST'>
+			<div id="main_block">
+				{% for i in result %}
+				<div id="items">
+					<div class="item">
+						<img src="{{i['image']}}" alt="" width="202" height="173" /><br />
+						<span>{{i['productname']}} : Rs.{{i['fare']}}</span><br><button class="buy" type="submit" name="key" value="{{i['sellid']}}"><h5>Buy this product</p></h5></button><br></a>
+					</div>
+					{% endfor %}
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+	                                                                                        																																																				
+		</div>
+	</div>
+{% endblock %}		
+</body>
+</html>

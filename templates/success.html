@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details</title>
+</head>
+<body>
+	{% if x %}
+	<h1 align="center"><u>Cab registered</u></h1>
+	<h3 align="center"><u>Contact details of cab owner</u></h3>
+	<h4 align="center">Name - {{x['name']}}</h4>
+	<h4 align="center">Contact number - {{x['contact']}}</h4>
+	{% endif %}
+	{%if details %}
+	<h3 align="center"><u>Cab details</u></h3>
+	<h4 align="center">Source - {{details['source']}}</h4>
+	<h4 align="center">Destination - {{details['destination']}}</h4>
+	<h4 align="center">Date - {{details['date']}}</h4>
+	<h4 align="center">Time - {{details['time']}}</h4>
+	<h4 align="center">Fare - INR {{details['fare']}}</h4>
+	{%endif%}
+	<h6 align="center"><u>Note</u> : Cab fare to be divided mutually.</h6>
+</body>
+</html>
